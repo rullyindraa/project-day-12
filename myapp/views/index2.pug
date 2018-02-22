@@ -1,0 +1,66 @@
+doctype html
+html
+  header
+    style.
+      div.container {
+      width: 50%;
+      height: 200%;
+      min-height: 100%;
+      border: 5px #020202;
+      footer {
+      text-align: center;
+      }
+      nav {
+      float: left;
+      max-width: 400px;
+      margin: 0;
+      padding: 1em;
+      margin-top: 30px;
+      margin-bottom: 5px;
+      }
+      .py-8 {
+      }
+      .px-5 {
+      }
+  body(style="\
+  margin-top: 40px;\
+  margin-left: 40px;\
+  margin-bottom: 40px;\
+  margin-right: 40px;\
+  ")
+    .container.mx-auto
+      head
+        link(href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet")
+        link(href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/preflight.min.css" rel="stylesheet")
+        script(src="javascripts/largestPrime.js")
+        ul.list-reset.flex.border-b
+          li.-mb-px.mr-1
+            a.bg-white.inline-block.border-l.border-t.border-r.rounded-t.py-2.px-8.text-blue-dark.font-semibold(href="http://localhost:3000/") Even Fibbonaci Number
+          li.mr-1
+            a.bg-white.inline-block.py-2.px-4.text-blue.font-semibold(class="hover:text-blue-darker") Largest Prime Factor
+      br
+      br
+      nav
+        article
+          form
+            .mb-5
+              label.block.text-black-darker.text-sm.font-bold.mb-7(for="number")
+                | Number
+              br
+              br
+              input#a.shadow.appearance-none.border.rounded.w-full.px-3.px-5.text-grey-darker(type="text" placeholder="Input some number" style=" height: 35px;")
+            br
+            br
+            .flex.items-center.justify-between
+              button.bg-black.text-white.font-bold.py-2.px-4.rounded(class="hover:bg-blue-dark" type="button" onclick="largestPrime()")
+                | Calculate
+            br
+            br
+            p
+              | Please input a number, and press "Calculate" button to get the result.
+            br
+            br
+            .mb-4
+              label.block.text-black-darker.text-sm.font-bold.mb-7(for="result")
+                | Result
+              input#result.shadow.appearance-none.border.rounded.w-full.h-full.px-3.px-5.text-grey-darker(type="text" style="height: 124px;")
